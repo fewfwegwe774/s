@@ -73,9 +73,6 @@ local Ui = Modules.Ui
 local Generation = Modules.Generation
 local Communication = Modules.Communication
 
---// Unpack config
-local BlackListedServices = Config.BlackListedServices
-
 --// Use custom font (optional)
 local FontContent = Files:GetAsset("ProggyClean.ttf", true)
 local FontJsonFile = Files:CreateFont("ProggyClean", FontContent)
