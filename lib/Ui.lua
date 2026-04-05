@@ -56,7 +56,7 @@ local SetClipboard = setclipboard or toclipboard or set_clipboard
 
 --// Libraries
 local ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/fewfwegwe774/b/refs/heads/main/ReGui.lua'))()
-local IDEModule = loadstring(game:HttpGet(''https://raw.githubusercontent.com/fewfwegwe774/b/refs/heads/main/lib/ide.lua'))()
+local IDEModule = loadstring(game:HttpGet('https://raw.githubusercontent.com/fewfwegwe774/b/refs/heads/main/lib/ide.lua'))()
 
 --// Services
 local InsertService: InsertService
