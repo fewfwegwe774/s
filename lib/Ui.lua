@@ -55,8 +55,8 @@ type Log = {
 local SetClipboard = setclipboard or toclipboard or set_clipboard
 
 --// Libraries
-local ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/fewfwegwe774/b/refs/heads/main/ReGui.lua'))()
-local IDEModule = loadstring(game:HttpGet('https://raw.githubusercontent.com/fewfwegwe774/b/refs/heads/main/lib/ide.lua'))()
+local ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/depthso/Dear-ReGui/refs/heads/main/ReGui.lua'))()
+local IDEModule = loadstring(game:HttpGet('https://raw.githubusercontent.com/depthso/Dear-ReGui/refs/heads/main/lib/ide.lua'))()
 
 --// Services
 local InsertService: InsertService
@@ -118,18 +118,6 @@ function Ui:FontWasSuccessful()
 		"Unfortunately your executor was unable to download the font and therefore switched to the Dark theme",
 		"\nIf you would like to use the ImGui theme, \nplease download the font (assets/ProggyClean.ttf)",
 		"and put put it in your workspace folder\n(Sigma Spy/assets)"
-	})
-end
-
-function Ui:LoadReGui()
-	local ThemeConfig = Config.ThemeConfig
-	ThemeConfig.TextFont = TextFont
-
-	--// ReGui
-	local PrefabsId = "rbxassetid://" .. ReGui.PrefabsId
-	ReGui:DefineTheme("SigmaSpy", ThemeConfig)
-	ReGui:Init({
-		Prefabs = InsertService:LoadLocalAsset(PrefabsId)
 	})
 end
 
