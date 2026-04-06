@@ -87,12 +87,16 @@ function Ui:SetClipboard(Content: string)
 end
 
 function Ui:LoadReGui()
-    local InsertService = game:GetService("InsertService")
     local PlayerGui = game:GetService("Players").LocalPlayer.PlayerGui
     
-    local Model = InsertService:LoadAsset(ReGui.PrefabsId)
-    Model.Name = "ReGui-Prefabs"
-    Model.Parent = PlayerGui
+    local ok, result = pcall(function()
+        return game:GetObjects("rbxassetid://71968920594655")[1]
+    end)
+    
+    if ok and result then
+        result.Name = "ReGui-Prefabs"
+        result.Parent = PlayerGui
+    end
     
     ReGui:Init({
         Font = TextFont
