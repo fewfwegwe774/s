@@ -87,6 +87,13 @@ function Ui:SetClipboard(Content: string)
 end
 
 function Ui:LoadReGui()
+    local InsertService = game:GetService("InsertService")
+    local PlayerGui = game:GetService("Players").LocalPlayer.PlayerGui
+    
+    local Model = InsertService:LoadAsset(ReGui.PrefabsId)
+    Model.Name = "ReGui-Prefabs"
+    Model.Parent = PlayerGui
+    
     ReGui:Init({
         Font = TextFont
     })
