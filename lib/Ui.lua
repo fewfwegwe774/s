@@ -86,6 +86,12 @@ function Ui:SetClipboard(Content: string)
 	SetClipboard(Content)
 end
 
+function Ui:LoadReGui()
+    ReGui:Init({
+        Font = TextFont
+    })
+end
+
 function Ui:TurnSeasonal(Text: string): string
     local SeasonLabels = self.SeasonLabels
     local Month = os.date("%B")
